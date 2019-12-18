@@ -4,6 +4,8 @@ sudo -u hdfs hadoop  fs -chown admin:admin /tmp/churn.all
 # Add CDSW environment variables for python3 like below:
 # PYSPARK_PYTHON = 	/bin/python3.6
 # PYSPARK_DRIVER_PYTHON	= /bin/python3.6	
+# HADOOP_CONF_DIR = /etc/hadoop/conf	
+# Also, make sure the nodes have HDFS, Yarn and spark gateway
 hadoop fs -put data/churn.all /tmp/
 chmod 755 cdsw-build.sh
 mkdir -p models/spark
